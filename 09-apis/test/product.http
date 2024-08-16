@@ -1,0 +1,35 @@
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjM3Mjc0MDQsInN1YiI6ImQzNjNlZDI0LTkxODktNDFjNy1hN2I0LWQ3Mjc1NDI5MmRhYyJ9.LP_2th3l3SowijKQdVC2FuqS2a4N1kB0ZcQ4ZHDDfeo
+
+POST http://localhost:8000/products
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "Class Control",
+  "price": 249.90
+}
+
+###
+GET http://localhost:8000/products
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###
+GET http://localhost:8000/products/d47ca5f6-a135-405a-8259-0712755bf34d
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###
+PUT http://localhost:8000/products/4175bedd-b94d-4966-9c19-04f91e592293
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "iso-system",
+  "price": 119.90
+}
+
+###
+DELETE http://localhost:8000/products/80e02574-5539-44ee-aca5-0b9e04c92c8f
+Content-Type: application/json
+Authorization: Bearer {{token}}
