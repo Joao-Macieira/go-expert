@@ -1,0 +1,11 @@
+GET http://localhost:8000/order
+
+### Create
+POST http://localhost:8000/order
+Content-Type: application/json
+
+{
+  "id": "aaaa",
+  "price": 249.90,
+  "tax": 9.50
+}
